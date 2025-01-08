@@ -33,6 +33,23 @@ class _HomePageState extends State<HomePage> {
     return gameButtons;
   }
 
+  void choiGame(GameButton gb){
+    setState(() {
+      if (activePlayer == 1) {
+        gb.text = "X";
+        gb.bg = Colors.red;
+        activePlayer = 2;
+        player1.add(gb.id);
+      }else{
+        gb.text="O";
+        gb.bg = Colors.black;
+        activePlayer = 1;
+        player2.add(gb.id);
+      }
+      
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return const Placeholder();
