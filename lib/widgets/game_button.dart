@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class GameButton {
+  //NOTE: Khai báo nút button Game
   final id;
   String text;
   Color bg;
